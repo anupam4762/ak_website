@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--css-->
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="styles.css" rel="stylesheet" type="text/css" media="all" />
+    <!--css-->
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--googlefonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway" rel="stylesheet"/>
+    <!--googlefonts-->
+
+    <!-- JS Files -->
+    <script src="scripts.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!--Navbar-->
+
+	<nav class="navbar navbar-expand-xl navbar-dark bg-custom">
+        <div class="container">
+            <a class="navbar-brand fs-2 fw-bold" href="#"><span><img src="ak-logo.png" width="35" height="35"/>&nbsp;</span>A.K. Science Tutorial</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDark" aria-controls="navbarDark" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse show" id="navbarDark">
+            <ul class="navbar-nav me-auto mb-2 mb-xl-0 fs-5 ms-auto p-2 text-center">
+                <li class="nav-item me-3">
+                <a class="nav-link" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item me-3">
+                <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item me-3">
+                <a class="nav-link" href="facilities.html">Facilities</a>
+                </li>
+                <li class="nav-item me-3">
+                <a class="nav-link" href="achievements.html">Achievements</a>
+                </li>
+                <li class="nav-item me-3">
+                <a class="nav-link" href="courses.html">Courses</a>
+                </li>
+                <li class="nav-item me-3">
+                <a class="nav-link active" href="resources.html">Resources</a>
+                </li>
+                <li class="nav-item me-3">
+                <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+            
+            </div>
+        </div>
+    </nav>
+
+<!--Navbar-->
+
+<!-- Resources Content -->
+
+<!-- Notes, Assignment and QB section -->
+<div class="container">
+    <h1 class="page-title">Resources</h1>
+    <hr>
+    <h2 class="section-heading">Notes/Assignments/Question Paper</h2>
+    <div id="myResNotesBtnContainer">
+        <button class="resbtn resbtnactive" onclick="filterSelection('all')" id="default"> Show all</button>
+        <button class="resbtn" onclick="filterSelection('Notes')"> Notes</button>
+        <button class="resbtn" onclick="filterSelection('Assignments')"> Assignments</button>
+        <button class="resbtn" onclick="filterSelection('question-paper')"> Question Paper</button>
+    </div>
+
+    <!-- Notes Grid -->
+    <div class="row">
+  <div class="notes-column Notes">
+    <div class="notes-content">
+        <h4>Class X Mathematics</h4>
+	    <p>Click to view 2023 Notes boards Paper for Mathematics</p>
+		<center><a href="./pdfs/math-2023.pdf"  target="_blank"><button type="button" class="res-btn">Download</button></a></center>
+    </div>
+  </div>
+  <div class="notes-column Notes">
+    <div class="notes-content">
+        <h4>Class X Physics</h4>
+	    <p>Click to view 2023 Notes boards Paper for Mathematics</p>
+		<center><a href="./pdfs/math-2023.pdf" target="_blank"><button type="button" class="res-btn">Download</button></a></center>
+    </div>
+  </div>
+  <div class="notes-column Notes">
+    <div class="notes-content">
+        <h4>Class X Chemistry</h4>
+	    <p>Click to view 2023 Notes boards Paper for Mathematics</p>
+		<center><a href="./pdfs/math-2023.pdf" target="_blank"><button type="button" class="res-btn">Download</button></a></center>
+    </div>
+  </div>
+
+  <div class="notes-column Notes">
+    <div class="notes-content">
+        <h4>Class X Biology</h4>
+	    <p>Click to view 2023 Notes boards Paper for Mathematics</p>
+		<center><a href="./pdfs/math-2023.pdf" target="_blank"><button type="button" class="res-btn">Download</button></a></center>
+    </div>
+  </div>
+  <div class="notes-column Notes">
+    <div class="notes-content">
+        <h4>Class IX Maths</h4>
+	    <p>Click to view 2023 Notes boards Paper for Mathematics</p>
+		<center><a href="./pdfs/math-2023.pdf" target="_blank"><button type="button" class="res-btn">Download</button></a></center>
+    </div>
+  </div>
+  <div class="notes-column Notes">
+    <div class="notes-content">
+        <h4>Class IX Physics</h4>
+	    <p>Click to view 2023 Notes boards Paper for Mathematics</p>
+		<center><a href="./pdfs/math-2023.pdf" target="_blank"><button type="button" class="res-btn">Download</button></a></center>
+    </div>
+  </div>
+  <div class="notes-column Assignments">
+    <div class="notes-content">
+        <h4>Class IX Chemistry</h4>
+	    <p>Click to view 2023 ICSE boards Paper for Mathematics</p>
+		<center><a href="./pdfs/math-2023.pdf" target="_blank"><button type="button" class="res-btn">Download</button></a></center>
+    </div>
+  </div>
+  <div class="notes-column Assignments">
+    <div class="notes-content">
+        <h4>Class IX Biology</h4>
+	    <p>Click to view 2023 ICSE boards Paper for Mathematics</p>
+		<center><a href="./pdfs/math-2023.pdf" target="_blank"><button type="button" class="res-btn">Download</button></a></center>
+    </div>
+  </div>
+  <div class="notes-column Assignments">
+    <div class="notes-content">
+        <h4>Class VIII Maths</h4>
+	    <p>Click to view 2023 ICSE boards Paper for Mathematics</p>
+		<center><a href="./pdfs/math-2023.pdf" target="_blank"><button type="button" class="res-btn">Download</button></a></center>
+    </div>
+  </div>
+    <div class="notes-column question-paper">
+    <div class="notes-content">
+        <h4>Class VIII Physics</h4>
+	    <p>Click to view 2023 ICSE boards Paper for Mathematics</p>
+		<center><a href="./pdfs/math-2023.pdf" target="_blank"><button type="button" class="res-btn">Download</button></a></center>
+    </div>
+  </div>
+  <div class="notes-column question-paper">
+    <div class="notes-content">
+        <h4>Class VIII Chemistry</h4>
+	    <p>Click to view 2023 ICSE boards Paper for Mathematics</p>
+		<center><a href="./pdfs/math-2023.pdf" target="_blank"><button type="button" class="res-btn">Download</button></a></center>
+    </div>
+  </div>
+  <div class="notes-column question-paper">
+    <div class="notes-content">
+        <h4>Class VIII Biology</h4>
+	    <p>Click to view 2023 ICSE boards Paper for Mathematics</p>
+		<center><a href="./pdfs/math-2023.pdf"><button type="button" class="res-btn">Download</button></a></center>
+    </div>
+  </div> 
+    </div>
+    <hr>
+</div>
+<!-- Notes, Assignment and QB section -->
+
+<!-- AK Excel Video Section -->
+<div class="container">
+	<h3 class="tittle">AK Excel Youtube Videos</h3>
+	<h3 class="video-head">Class X</h3>
+	<div class="scroll-container">
+		<iframe class="yt-frame" width="300" height="250"
+			src="https://www.youtube.com/embed/watch?v=dLM4GXcYTR0&list=PLTQcUh7AdNs0Q5ZdxcT9gaFsUCJHPuEVG" allowfullscreen>
+		</iframe>
+		<iframe class="yt-frame" type="text/html" width="300" height="250"
+			src="https://www.youtube.com/embed/watch?v=Na2UAW6iMKg&list=PLTQcUh7AdNs0Q5ZdxcT9gaFsUCJHPuEVG&index=33" allowfullscreen>
+		</iframe>
+        <iframe class="yt-frame" width="300" height="250"
+            src="https://www.youtube.com/embed/watch?v=4WG1qgJLSbI&list=PLTQcUh7AdNs0Q5ZdxcT9gaFsUCJHPuEVG&index=15" allowfullscreen>
+        </iframe>
+        <iframe class="yt-frame" width="300" height="250"
+            src="https://www.youtube.com/embed/watch?v=WbttR64xmpk&list=PLTQcUh7AdNs0MpbBbGjipPlXlzgLREsFq" allowfullscreen>
+        </iframe>
+        <iframe class="yt-frame" width="300" height="250"
+            src="https://www.youtube.com/embed/watch?v=WbttR64xmpk&list=PLTQcUh7AdNs0MpbBbGjipPlXlzgLREsFq" allowfullscreen>
+        </iframe>
+        <iframe class="yt-frame" width="300" height="250"
+            src="https://www.youtube.com/embed/watch?v=WbttR64xmpk&list=PLTQcUh7AdNs0MpbBbGjipPlXlzgLREsFq" allowfullscreen>
+        </iframe>
+	</div>
+	<hr>
+	<h3 class="video-head">Class IX</h3>	
+	<div class="scroll-container">
+		<iframe class="yt-frame" width="300" height="250"
+			src="https://www.youtube.com/embed/watch?v=VeZSl9LjF-Q&list=PLTQcUh7AdNs3cEofrtEnu8Wz8Bd0zFm1Z" allowfullscreen>
+		</iframe>
+		<iframe class="yt-frame" width="300" height="250"
+			src="https://www.youtube.com/embed/watch?v=6lkGjC7lspw&list=PLTQcUh7AdNs2vViu5STpW-dQRd8Zm72bG" allowfullscreen>
+		</iframe>
+		<iframe class="yt-frame" width="300" height="250"
+			src="https://www.youtube.com/embed/watch?v=riYE7tMF0cw&list=PLTQcUh7AdNs0OeBbGgpyPxI96YhePns07" allowfullscreen>
+		</iframe>
+		<iframe class="yt-frame" width="300" height="250"
+			src="https://www.youtube.com/embed/watch?v=FRqJNsZ7fSo&list=PLTQcUh7AdNs0mdPtTHtxFd4qeVVWKHIwO&index=7" allowfullscreen>
+		</iframe>
+        <iframe class="yt-frame" width="300" height="250"
+			src="https://www.youtube.com/embed/watch?v=FRqJNsZ7fSo&list=PLTQcUh7AdNs0mdPtTHtxFd4qeVVWKHIwO&index=7" allowfullscreen>
+		</iframe>
+        <iframe class="yt-frame" width="300" height="250"
+			src="https://www.youtube.com/embed/watch?v=FRqJNsZ7fSo&list=PLTQcUh7AdNs0mdPtTHtxFd4qeVVWKHIwO&index=7" allowfullscreen>
+		</iframe>
+	</div>
+    <br>
+	<a href="https://www.youtube.com/@akexcel/featured" target="_blank"><button type="button" class="btn btn-primary">Click for more videos <span class="glyphicon glyphicon-new-window icon-links"></span></button></a>
+    <br>
+    <br>
+</div>
+<!-- AK Excel Video Section -->
+
+<!-- Resources Content -->
+
+
+<!-- Footer -->
+<footer class="bg-body-tertiary text-center text-lg-start text-white bg-custom">
+  <!-- Grid container -->
+  <div class="footer-section">
+	<div class="container p-4">
+    <!--Grid row-->
+    <div class="row">
+      <!--Grid column-->
+      <div class="col-lg-4 col-md-4 mb-4 mb-md-0">
+        <h5 class="text-uppercase">About Us</h5>
+        <p align="justify"><span>A.K. Science Tutorial stands as a distinguished coaching center catering to the ICSE and CBSE Boards, proudly rooted in Patna, Bihar since its inception in 2001. Specializing in classes for students from VIII to X, we provide comprehensive courses encompassing Physics, Chemistry, Biology, and Mathematics, augmented by intensive crash courses in Computer Science (Core Java) and Topography. </span></p>
+      </div>
+      
+      <div class="col-lg-4 col-md-4 mb-4 mb-md-0">
+        <h5 class="text-uppercase">Upcoming Batches</h5>
+        <p align="justify">New batches will be announced soon via webiste and other media. Kindly download our brochure and keep visiting our website for further details. </p>
+		<a href="#" >Download Brochure</a>		
+      </div>
+
+	  <div class="col-lg-4 col-md-4 mb-4 mb-md-0">
+        <h5 class="text-uppercase">Contact Us</h5>
+		<ul align="left">
+			<li align="left"><i class="fa-solid fa-address-book"></i> &nbsp; 107, Sukriti Apartment, South P, SP Verma Rd, Old Jakkanpur, Lodipur, Patna, Bihar 800001</li>
+			<li align="left"><i class="fa-solid fa-phone"></i> &nbsp; +91-9431045413</li>
+			<li align="left"><i class="fa-solid fa-envelope"></i> &nbsp; <a href="#"> aksciencetutorial@gmail.com</a></li>
+		</ul>
+      </div>
+      <!--Grid column-->
+    </div>
+    <!--Grid row-->
+  </div>
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="copy-section">
+		<div class="">
+			<div class="iconup"><a href="#top"><i class="fa-solid fa-chevron-up"></i> &nbsp;TOP</a></div>
+			<div class="social-icons">
+				<a href="https://www.facebook.com" target='_blank'><i class="icon1"></i></a>
+				<a href="https://twitter.com" target="_blank"><i class="icon2"></i></a>
+				<a href="https://plus.google.com" target="_blank"><i class="icon3"></i></a>
+				<a href="https://www.linkedin.com" target="_blank"><i class="icon4"></i></a>
+			</div>
+			<div class="copy">
+				<p>&copy; A.K. Science Tutorial 2024 | Designed & Maintained by Anupam Anand</a></p>
+			</div>
+		</div>
+	</div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+
+</body>
+</html>
