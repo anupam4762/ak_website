@@ -4,42 +4,134 @@
 }
 
 .bg-custom{
-    background-color: #164863 !important;
+    background-color: #111111 !important;
 }
 
-.contact-info ul li a {
-    font-size: 1em;
+/* Contact Page style */
+
+.page-title {
+    margin: 0.5em;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.contact-info {
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background: linear-gradient(to bottom right, #ffffff, #f2f6fc);
+    border: 1px solid #d2d2d2;
+    margin-bottom: 25px;
+}
+
+.contact-info:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.contact-info h4 {
+    text-align: center;
+    color: #333;
+}
+
+.contact-info p {
+    text-align: justify;
+    color: #555;
+}
+
+.contact-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact-info ul li {
+    margin-bottom: 10px;
     color: #777;
 }
 
-.page-title{
-    margin: 0.5em;
-    text-align: center;
+.contact-info ul li i {
+    margin-right: 10px;
+    color: #007bff;
 }
 
-.contact-info{
-    padding: 10px 10px;
-}
-
- h4.page-title
-{
-     font-size: 3.2em;
- }
-
- .contact-row{
-    background-color: #9BBEC8;
-    border-radius: 5px;
-    color:#5e5555;
- }
-
-li{
-list-style-type:none;
-}
-
-a{
+.contact-info ul li a {
+    color: #007bff;
     text-decoration: none;
+}
+
+.contact-info ul li a:hover {
+    color: #0056b3;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
 }
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+.contact-row {
+    margin-top: 30px;
+}
+
+.animated {
+    animation-duration: 1s;
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fadeInLeft {
+    animation-name: fadeInLeft;
+}
+
+.fadeInRight {
+    animation-name: fadeInRight;
+}
+
+
+
+/* Footer section */
 
 .footer-section{
     color:#DDF2FD;
@@ -152,7 +244,7 @@ a{
 /* Resources Page Styles */
 
 /* Style the buttons */
-.resbtn {
+.notes-btn {
     border: none;
     outline: none;
     padding: 12px 16px;
@@ -161,22 +253,22 @@ a{
     border-radius: 5px;
 }
 
-.resbtn:hover {
+.notes-btn:hover {
     background-color: #ddd;
 }
 
-.resbtnactive {
-    background-color: #666;
+.notes-btn-active {
+    background-color: #015d92;
     color: white;
 }
 
-.row {
+.notes-row {
     margin: 10px -16px;
 }
 
 /* Add padding BETWEEN each column */
-.row,
-.row>.notes-column {
+.notes-row,
+.notes-row>.notes-column {
     padding: 8px;
 }
 
@@ -239,39 +331,81 @@ a{
 }
 
 /* Clear floats after rows */
-.row:after {
+.notes-row:after {
     content: "";
     display: table;
     clear: both;
 }
 
-.show {
+.res-show {
     display: block;
 }
 
 /* Content */
+/* Styling for notes content */
 .notes-content {
-    background-color: #9BBEC8;
-    padding: 10px;
-    height: auto;
-    border-radius: 5px;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
     text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
 }
 
-.notes-content h4{
-    color: black;
+.notes-content h4 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
 }
 
-.notes-content p{
+.notes-content p {
+    color: #666;
     text-align: justify;
-    color: rgb(247, 237, 237);
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
 }
 
-.res-btn{
-    padding: 5px;
+/* Button styling */
+.res-btn {
+    padding: 12px 24px;
     border-radius: 5px;
     background-color: #015d92;
     color: white;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.res-btn:hover {
+    background-color: #9BBEC8;
+    transform: translateY(-2px);
+    color: #000;
+    font-weight: 500;
+}
+
+/* Add animation to notes content on hover */
+.notes-content:hover {
+    transform: translateY(-5px);
+}
+
+/* Add animation to headings and paragraphs on hover */
+.notes-content:hover h4,
+.notes-content:hover p {
+    color: #000;
+}
+
+/* Add animation to button on hover */
+.res-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Video Section */
+
+.btn-more-videos{
+    background-color: #015d92;
 }
 
 .section-heading{
@@ -289,14 +423,6 @@ div.scroll-container {
 div.scroll-container img {
     padding: 10px;
 }
-
-/* .video-head {
-    text-align: left;
-    font-size: 2em;
-    margin-bottom: 10px;
-    color: #3B5998;
-    font-weight: 600;
-} */
 
 .course-container{
     justify-content: center;
@@ -349,7 +475,8 @@ div.scroll-container img {
 }
 
 .accordion {
-	background-color: #427D9D;
+	/* background-color: #427D9D; */
+    background-color: #333333;
 	border-radius: 3px;
 	margin-bottom: 2px;
 	color: white;
@@ -364,7 +491,7 @@ div.scroll-container img {
   }
   
   .active-accordian, .accordion:hover {
-	background-color: #9BBEC8;
+	background-color: #979899;
 	color: white;
   }
 
@@ -512,112 +639,125 @@ div.scroll-container img {
 }
 
 /* Facilities Page Style */
-.facilites-content{
-    width: 100%;
-    padding-top: 30px;
-    background-color: #5e5555;
+
+/* Custom styles for facilities section */
+.facilitiesSection {
+    padding: 50px 0;
+    background-color: #f2f7fa;
+    text-align: center;
 }
 
+/* Custom styles for facilities section title */
+.page-title {
+    font-size: 36px;
+    color: #164863;
+    margin-bottom: 30px;
+}
+
+/* Custom styles for facilities cards container */
 .facilities-container {
-    padding: 10px 10%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    
+    justify-content: center;
+    gap: 30px;
 }
 
-.facilities-container .facilities-card {
-    /*overflow: hidden;*/
-    width: 350px;
-    height: auto;
-    margin-bottom: 40px;
-    background: #fff;
-    /* For making two divs align vertically */
+/* Custom styles for individual facilities card */
+.facilities-card {
+    width: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Custom styles for facilities card icons */
+.icon i {
+    font-size: 48px;
+    color: #164863;
+    margin-bottom: 20px;
+}
+
+/* Custom styles for facilities card logo images */
+.logo-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    object-fit: cover;
+    margin: 0 auto 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Custom styles for facilities card title */
+#title {
+    font-size: 24px;
+    color: #2E3D49;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Custom styles for facilities card content */
+#content {
+    font-size: 16px;
+    color: #2E3D49;
+    line-height: 1.6;
+}
+
+/* Custom styles for hover effects on facilities card */
+.facilities-card:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+}
+
+.facilities-card:hover .logo-img {
+    transform: scale(1.1);
+}
+
+/* Custom styles for card overlay */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(22, 72, 99, 0.7);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 7px;
-    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-}
-
-.facilities-logo {
-    /* display: flex;
-    flex-wrap: wrap; */
     justify-content: center;
-    padding: 15px;
+    align-items: center;
 }
 
-.facilities-logo img{
-    width: 250px;
-    height: 200px;
+.facilities-card:hover .overlay {
+    opacity: 1;
 }
 
-.facilties-logo h6 {
-    width: 150px;
-    text-align: center;
-}
-
-.facilities-logo #title{
-    padding: 7px;
-    color: #2E3D49;
+.overlay-content {
+    color: #fff;
+    font-size: 20px;
     font-weight: bold;
 }
 
-.facilities-logo #content {
-    padding: 5px;
-    font-size: .9em;
-    color: #2E3D49;
-    line-height: 20px;
-    text-align: justify;
+/* Custom styles for responsiveness */
+@media (max-width: 1200px) {
+    .facilities-card {
+        width: calc(50% - 20px);
+    }
 }
 
-.facilities-cont #title {
-    padding: 7px;
-    color: #2E3D49;
-    font-weight: bold;
+@media (max-width: 768px) {
+    .facilities-card {
+        width: calc(100% - 20px);
+    }
 }
 
-.facilities-cont #content {
-    padding: 5px;
-    font-size: .9em;
-    color: #2E3D49;
-    line-height: 20px;
-    text-align: center;
-}
 
-.icon {
-    text-align: center;
-}
-
-.icon i {
-    width: 80px;
-    height: 80px;
-    font-size: 2em;
-    border: 4px double #ee6e73;
-    line-height: 80px;
-    border-radius: 50px;
-    color: #164863;
-}
-
-.facilities-card:hover div.icon i {
-    transform: rotateY(360deg);
-    transition: .5s all;
-    -webkit-transition: .5s all;
-    -moz-transition: .5s all;
-    -o-transition: .5s all;
-    -ms-transition: .5s all;
-}
-
-.logo-img{
-    transition-duration: .6s;
-}
-
-.logo-img:hover {
-    transform: scale(1.2);
-    border-radius: 0px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-}
 
 /* About page style */
 
@@ -795,13 +935,17 @@ img {
 /* Media Query for small screens */
 @media (max-width: 600px) {
     .fac-grid-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
         /* One column for small screens */
+    }
+
+    .fac-grid-container h5{
+        font-size: 10px;
     }
 }
 
 .fac-grid-item h2{
-    color: 283B66;
+    color: #283B66;
     margin-top: 7px;
     font-size: 1.5em;
 }
@@ -873,4 +1017,337 @@ img {
 
 .center-fac{
     padding-left: 10px;
+}
+
+
+
+
+@media (min-width:768px) {
+
+    .video-container-10
+    {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
+
+@media (min-width:576px) {
+
+    .video-container-10 {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+}
+
+
+.video-container-9 {
+    width: 100%;
+    /* padding-right: var(--bs-gutter-x, .75rem);
+    padding-left: var(--bs-gutter-x, .75rem); */
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #fff
+}
+
+@media (min-width:768px) {
+
+    .video-container-9
+    {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
+
+@media (min-width:576px) {
+
+    .video-container-9 {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+}
+
+#home-img-carousel {
+    height: 300px; /* Adjust the height as needed */
+}
+
+#home-img-carousel img{
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* Course Page */
+
+/* Custom styles for course container */
+.course-container {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom styles for page title */
+.page-title {
+    font-size: 36px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for page title */
+.page-title:hover {
+    color: #164863;
+}
+
+/* Custom styles for section title */
+.tittle {
+    font-size: 32px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for section title */
+.tittle:hover {
+    color: #164863;
+}
+
+/* Custom styles for course grids */
+.course-grids {
+    margin-bottom: 40px;
+}
+
+/* Custom styles for course grid items */
+.course-grid1 {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for course grid items */
+.course-grid1:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Custom styles for course list */
+.grid-part {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Custom styles for course list items */
+.grid-part li {
+    font-size: 20px;
+    color: #555;
+    padding-left: 40px;
+    position: relative;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for course list items */
+.grid-part li:hover {
+    color: #164863;
+}
+
+/* Custom styles for icons in course list */
+.grid-part li i {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: #164863;
+}
+
+/* Custom styles for tables */
+.course-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+/* Custom styles for table headers */
+.course-table th {
+    background-color: #164863;
+    color: #fff;
+    padding: 16px;
+    text-align: left;
+}
+
+/* Custom styles for table cells */
+.course-table td {
+    padding: 16px;
+    border-bottom: 1px solid #ddd;
+    font-size: 18px;
+}
+
+/* Custom styles for alternating row colors */
+.course-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Custom styles for hr */
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+/* Resources Page - New Video styles */
+
+/* Custom styles for video section container */
+.video-container-10 {
+    padding: 30px;
+    margin: 20px auto;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.video-container-9 {
+    padding: 30px;
+    margin: 20px auto;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom styles for video section header */
+.video-section-head {
+    margin-bottom: 30px;
+}
+
+.video-section-head h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Custom styles for carousel indicators */
+.carousel-indicators button {
+    background-color: #007bff;
+    border: none;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-indicators button.active {
+    background-color: #fff;
+}
+
+/* Custom styles for carousel controls positioning on small screens */
+@media (max-width: 576px) {
+    .carousel-control-prev,
+    .carousel-control-next {
+        top: 50%; /* Align controls vertically in the middle */
+        transform: translateY(-50%);
+        z-index: 2; /* Ensure controls appear above cards */
+        width: 5%;
+    }
+    
+    .carousel-control-prev {
+        left: 0;
+    }
+    
+    .carousel-control-next {
+        right: 0;
+    }
+}
+
+/* Custom styles for card */
+.yt-card {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.yt-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Custom styles for iframe */
+.yt-frame {
+    width: 100%;
+    height: 200px;
+    border: none;
+    border-radius: 10px 10px 0 0;
+}
+
+/* Custom styles for card body */
+.card-body {
+    padding: 20px;
+}
+
+/* Custom styles for card title */
+.card-title {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Custom styles for card text */
+.card-text {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Custom styles for button */
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Custom styles for card container */
+.row-cols-lg-4 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Custom styles for card columns on small screens */
+@media (max-width: 768px) {
+    .col-lg-4 {
+        flex: 0 0 100%; /* Full width on small screens */
+    }
 }
