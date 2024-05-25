@@ -286,6 +286,11 @@ li {
             display: none;
             /* Hide all elements by default */
         }
+
+        .custom-table td{
+            /* line-height: 5px; */
+            padding: 0;
+        }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -295,6 +300,11 @@ li {
             width: 50%;
             display: none;
             /* Hide all elements by default */
+        }
+
+        .custom-table td{
+            /* line-height: 5px; */
+            padding: 0;
         }
 }
 
@@ -316,6 +326,29 @@ li {
             display: none;
             /* Hide all elements by default */
         }
+
+        .custom-table{
+            width: 70%;
+        }
+        .custom-table td{
+            /* line-height: 5px; */
+            padding: 0;
+        }
+
+        .custom-table td:nth-child(4) {
+            width: 130px; /* Adjust the width as needed */
+        }
+        
+        .custom-table td:nth-child(3) {
+            width: 155px; /* Adjust the width as needed */
+        }
+        .custom-table td:nth-child(2) {
+            width: 130px; /* Adjust the width as needed */
+        }
+        
+        .custom-table td:nth-child(1) {
+            width: 155px; /* Adjust the width as needed */
+        }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -333,6 +366,10 @@ li {
     content: "";
     display: table;
     clear: both;
+}
+
+.notes-container{
+    display: hidden;
 }
 
 .res-show {
@@ -362,6 +399,47 @@ li {
     text-align: justify;
     margin-bottom: 15px;
     transition: color 0.3s ease;
+}
+
+/* Default styles for table-container */
+.table-container {
+    width: 100%; /* Adjust the width as needed */
+    margin: 0 auto; /* Center horizontally on all screen sizes */
+}
+
+.table-container hr{
+    font-weight: 600;
+}
+
+/* Styles for large screens (min-width: 992px) */
+@media (min-width: 992px) {
+    .table-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center horizontally */
+    }
+
+    /* Adjust table width to remain unchanged on large screens */
+    .table-container .table {
+        width: 100%; /* Set table width to 100% */
+        max-width: unset; /* Unset the maximum width */
+    }
+}
+
+.custom-table td{
+    text-align: center;
+    vertical-align: middle;
+}
+
+.custom-table a{
+    text-decoration: none;
+}
+
+.custom-table th{
+    text-align: center;
+    vertical-align: middle;
+    background-color: #015d92;
+    color: #fff;
 }
 
 /* Button styling */

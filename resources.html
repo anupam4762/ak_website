@@ -67,115 +67,265 @@
   <!-- Notes, Assignment and QB section -->
   <div class="container">
     <h1 class="page-title">Resources</h1>
-    <hr>
-    <h2 class="section-heading">Notes/Assignments/Question Paper</h2>
-    <div id="myResNotesBtnContainer">
-      <button id="all" class="notes-btn notes-btn-active" onclick="filterSelection('all')" id="default-restab"> Show all</button>
-      <button id="Notes" class="notes-btn" onclick="filterSelection('Notes')"> Notes</button>
-      <button id="Assignments" class="notes-btn" onclick="filterSelection('Assignments')"> Assignments</button>
-      <button id="question-paper" class="notes-btn" onclick="filterSelection('question-paper')"> Question Paper</button>
-    </div>
-
-    <!-- Notes Grid -->
-    <div class="notes-row">
-      <div class="notes-column Notes res-show">
-        <div class="notes-content">
-          <h4>Class X Mathematics</h4>
-          <p>Click to view 2023 Notes boards Paper for Mathematics</p>
-          <center><a href="./pdfs/math-2023.pdf" target="_blank"><button type="button"
-                class="res-btn">Download</button></a></center>
-        </div>
-      </div>
-      <div class="notes-column Notes res-show">
-        <div class="notes-content">
-          <h4>Class X Physics</h4>
-          <p>Click to view 2023 Notes boards Paper for Mathematics</p>
-          <center><a href="./pdfs/math-2023.pdf" target="_blank"><button type="button"
-                class="res-btn">Download</button></a></center>
-        </div>
-      </div>
-      <div class="notes-column Notes res-show">
-        <div class="notes-content">
-          <h4>Class X Chemistry</h4>
-          <p>Click to view 2023 Notes boards Paper for Mathematics</p>
-          <center><a href="./pdfs/math-2023.pdf" target="_blank"><button type="button"
-                class="res-btn">Download</button></a></center>
-        </div>
-      </div>
-
-      <div class="notes-column Notes res-show">
-        <div class="notes-content">
-          <h4>Class X Biology</h4>
-          <p>Click to view 2023 Notes boards Paper for Mathematics</p>
-          <center><a href="./pdfs/math-2023.pdf" target="_blank"><button type="button"
-                class="res-btn">Download</button></a></center>
-        </div>
-      </div>
-      <div class="notes-column Notes res-show">
-        <div class="notes-content">
-          <h4>Class IX Maths</h4>
-          <p>Click to view 2023 Notes boards Paper for Mathematics</p>
-          <center><a href="./pdfs/math-2023.pdf" target="_blank"><button type="button"
-                class="res-btn">Download</button></a></center>
-        </div>
-      </div>
-      <div class="notes-column Notes res-show">
-        <div class="notes-content">
-          <h4>Class IX Physics</h4>
-          <p>Click to view 2023 Notes boards Paper for Mathematics</p>
-          <center><a href="./pdfs/math-2023.pdf" target="_blank"><button type="button"
-                class="res-btn">Download</button></a></center>
-        </div>
-      </div>
-      <div class="notes-column Assignments res-show">
-        <div class="notes-content">
-          <h4>Class IX Chemistry</h4>
-          <p>Click to view 2023 ICSE boards Paper for Mathematics</p>
-          <center><a href="./pdfs/math-2023.pdf" target="_blank"><button type="button"
-                class="res-btn">Download</button></a></center>
-        </div>
-      </div>
-      <div class="notes-column Assignments res-show">
-        <div class="notes-content">
-          <h4>Class IX Biology</h4>
-          <p>Click to view 2023 ICSE boards Paper for Mathematics</p>
-          <center><a href="./pdfs/math-2023.pdf" target="_blank"><button type="button"
-                class="res-btn">Download</button></a></center>
-        </div>
-      </div>
-      <div class="notes-column Assignments res-show">
-        <div class="notes-content">
-          <h4>Class VIII Maths</h4>
-          <p>Click to view 2023 ICSE boards Paper for Mathematics</p>
-          <center><a href="./pdfs/math-2023.pdf" target="_blank"><button type="button"
-                class="res-btn">Download</button></a></center>
-        </div>
-      </div>
-      <div class="notes-column question-paper res-show">
-        <div class="notes-content">
-          <h4>Class VIII Physics</h4>
-          <p>Click to view 2023 ICSE boards Paper for Mathematics</p>
-          <center><a href="./pdfs/math-2023.pdf" target="_blank"><button type="button"
-                class="res-btn">Download</button></a></center>
-        </div>
-      </div>
-      <div class="notes-column question-paper res-show">
-        <div class="notes-content">
-          <h4>Class VIII Chemistry</h4>
-          <p>Click to view 2023 ICSE boards Paper for Mathematics</p>
-          <center><a href="./pdfs/math-2023.pdf" target="_blank"><button type="button"
-                class="res-btn">Download</button></a></center>
-        </div>
-      </div>
-      <div class="notes-column question-paper res-show">
-        <div class="notes-content">
-          <h4>Class VIII Biology</h4>
-          <p>Click to view 2023 ICSE boards Paper for Mathematics</p>
-          <center><a href="./pdfs/math-2023.pdf"><button type="button" class="res-btn">Download</button></a></center>
-        </div>
-      </div>
-    </div>
     <!-- <hr> -->
+    <div class="table-container">
+      <div id="myResNotesBtnContainer" class="resBtnContainer">
+        <button id="all" class="notes-btn notes-btn-active" onclick="filterSelection('all')" > Show all</button>
+        <button id="Notes" class="notes-btn" onclick="filterSelection('Notes')"> Notes</button>
+        <button id="Assignments" class="notes-btn" onclick="filterSelection('Assignments')"> Assignments</button>
+        <button id="Papers" class="notes-btn" onclick="filterSelection('Papers')"> Question Paper</button>
+      </div>
+
+      <hr>
+      <!-- Notes table -->
+      <div class="notes-container Notes all">
+            <h2 class="section-heading">Notes</h2>
+            <table class="table table-bordered custom-table">
+              <thead>
+                <tr>
+                  <th>Board Notes </th>
+                  <th>Class</th>
+                  <th>Subject</th>
+                  <th>Material</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td rowspan="4">ICSE</td>
+                  <td rowspan="4">Class X</td>
+                  <td>Physics</td>
+                  <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+                </tr>
+                <tr>
+                  <td>Chemistry</td>
+                  <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+                </tr>
+                <tr>
+                  <td>Biology</td>
+                  <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+                </tr>
+                <tr>
+                  <td>Mathematics</td>
+                  <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+                </tr>
+                <tr>
+                  <td rowspan="4">ICSE</td>
+                  <td rowspan="4">Class IX</td>
+                  <td>Physics</td>
+                  <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+                </tr>
+                <tr>
+                  <td>Chemistry</td>
+                  <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+                </tr>
+                <tr>
+                  <td>Biology</td>
+                  <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+                </tr>
+                <tr>
+                  <td>Mathematics</td>
+                  <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+                </tr>
+                <tr>
+                  <td rowspan="4">ICSE</td>
+                  <td rowspan="4">Class VIII</td>
+                  <td>Physics</td>
+                  <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+                </tr>
+                <tr>
+                  <td>Chemistry</td>
+                  <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+                </tr>
+                <tr>
+                  <td>Biology</td>
+                  <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+                </tr>
+                <tr>
+                  <td>Mathematics</td>
+                  <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+                </tr>
+                <tr>
+                  <td rowspan="4">CBSE</td>
+                  <td rowspan="4">Class X</td>
+                  <td>Physics</td>
+                  <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+                </tr>
+                <tr>
+                  <td>Chemistry</td>
+                  <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+                </tr>
+                <tr>
+                  <td>Biology</td>
+                  <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+                </tr>
+                <tr>
+                  <td>Mathematics</td>
+                  <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+                </tr>
+                <tr>
+                  <td rowspan="4">CBSE</td>
+                  <td rowspan="4">Class IX</td>
+                  <td>Physics</td>
+                  <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+                </tr>
+                <tr>
+                  <td>Chemistry</td>
+                  <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+                </tr>
+                <tr>
+                  <td>Biology</td>
+                  <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+                </tr>
+                <tr>
+                  <td>Mathematics</td>
+                  <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+                </tr>
+                <tr>
+                  <td rowspan="4">CBSE</td>
+                  <td rowspan="4">Class VIII</td>
+                  <td>Physics</td>
+                  <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+                </tr>
+                <tr>
+                  <td>Chemistry</td>
+                  <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+                </tr>
+                <tr>
+                  <td>Biology</td>
+                  <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+                </tr>
+                <tr>
+                  <td>Mathematics</td>
+                  <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+                </tr>
+              </tbody>
+            </table>
+      </div>
+
+      <!-- Assignments table -->
+
+      <div class="notes-container Assignments all">
+        <h2 class="section-heading">Assignments</h2>
+        <table class="table table-bordered custom-table">
+          <thead>
+            <tr>
+              <th>Board Notes </th>
+              <th>Class</th>
+              <th>Subject</th>
+              <th>Material</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td rowspan="2">ICSE</td>
+              <td rowspan="2">Class X</td>
+              <td>Physics</td>
+              <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+            </tr>
+            <tr>
+              <td>Mathematics</td>
+              <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+            </tr>
+            <tr>
+              <td rowspan="">ICSE</td>
+              <td rowspan="">Class IX</td>
+              <td>Physics</td>
+              <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+            </tr>
+            <tr>
+              <td rowspan="2">ICSE</td>
+              <td rowspan="2">Class VIII</td>
+              <td>Physics</td>
+              <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+            </tr>
+            <tr>
+              <td>Chemistry</td>
+              <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+            </tr>
+            <tr>
+              <td rowspan="">CBSE</td>
+              <td rowspan="">Class X</td>
+              <td>Physics</td>
+              <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+            </tr>
+            <tr>
+              <td rowspan="">CBSE</td>
+              <td rowspan="">Class IX</td>
+              <td>Physics</td>
+              <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+            </tr>
+            <tr>
+              <td rowspan="">CBSE</td>
+              <td rowspan="">Class VIII</td>
+              <td>Physics</td>
+              <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Question Paper -->
+    
+      <div class="notes-container Papers all">
+        <h2 class="section-heading">Question Papers</h2>
+        <table class="table table-bordered custom-table">
+          <thead>
+            <tr>
+              <th>Board Notes </th>
+              <th>Class</th>
+              <th>Subject</th>
+              <th>Material</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td rowspan="2">ICSE</td>
+              <td rowspan="2">Class X</td>
+              <td>Physics</td>
+              <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+            </tr>
+            <tr>
+              <td>Mathematics</td>
+              <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+            </tr>
+            <tr>
+              <td rowspan="">ICSE</td>
+              <td rowspan="">Class IX</td>
+              <td>Physics</td>
+              <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+            </tr>
+            <tr>
+              <td rowspan="2">ICSE</td>
+              <td rowspan="2">Class VIII</td>
+              <td>Physics</td>
+              <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+            </tr>
+            <tr>
+              <td>Chemistry</td>
+              <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+            </tr>
+            <tr>
+              <td rowspan="">CBSE</td>
+              <td rowspan="">Class X</td>
+              <td>Physics</td>
+              <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+            </tr>
+            <tr>
+              <td rowspan="">CBSE</td>
+              <td rowspan="">Class IX</td>
+              <td>Physics</td>
+              <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+            </tr>
+            <tr>
+              <td rowspan="">CBSE</td>
+              <td rowspan="">Class VIII</td>
+              <td>Physics</td>
+              <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
 
 

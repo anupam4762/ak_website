@@ -15,81 +15,44 @@ $('a[href*="#top"]:not([href="#"])').click(function () {
     }
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-    console.log("hello");
-    // Ensure the default tab is selected and displayed
-    document.getElementById("default-restab").click();
 
-    var btnContainer = document.getElementById("myResNotesBtnContainer");
-    var btns = btnContainer.getElementsByClassName("notes-btn");
+function filterSelection(category) {
+    // Remove the 'notes-btn-active' class from all buttons
+    var buttons = document.querySelectorAll('.notes-btn');
+    buttons.forEach(function(button) {
+        button.classList.remove('notes-btn-active');
+    });
 
-    for (var i = 0; i < btns.length; i++) {
-        btns[i].addEventListener("click", function (e) {
+    // Add the 'notes-btn-active' class to the selected button
+    var selectedButton = document.getElementById(category);
+    if (selectedButton) {
+        selectedButton.classList.add('notes-btn-active');
+    }
 
-
-            var current = document.getElementsByClassName("notes-btn-active");
-            // Remove the anupam class from the currently active button
-            if (current.length > 0) {
-                current[0].classList.remove("notes-btn-active");
-            }
-
-
-            // Add the anupam class to the clicked button
-
+    // Hide all containers initially
+    var containers = document.querySelectorAll('.notes-container');
+    containers.forEach(function(container) {
+        container.style.display = 'none';
+    });
+    
+    // Show the selected container and update the heading
+    if (category === 'all') {
+        containers.forEach(function(container) {
+            container.style.display = 'block';
         });
-    }
-});
-
-function filterSelection(c) {
-
-    var x, i, btname;
-    btname = c;
-    x = document.getElementsByClassName("notes-column");
-    if (c == "all") c = "";
-    for (i = 0; i < x.length; i++) {
-        w3RemoveClass(x[i], "res-show");
-        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "res-show");
-    }
-
-
-
-    var btnContainer = document.getElementById("myResNotesBtnContainer");
-    var btns = btnContainer.getElementsByClassName("notes-btn");
-
-    var current = document.getElementsByClassName("notes-btn-active");
-    // Remove the anupam class from the currently active button
-    if (current.length > 0) {
-        current[0].classList.remove("notes-btn-active");
-    }
-
-    for (var i = 0; i < btns.length; i++) {
-
-        if (btname == btns[i].id)
-            btns[i].classList.add("notes-btn-active");
-
-    }
-
-}
-
-function w3AddClass(element, name) {
-    var i, arr1, arr2;
-    arr1 = element.className.split(" ");
-    arr2 = name.split(" ");
-    for (i = 0; i < arr2.length; i++) {
-        if (arr1.indexOf(arr2[i]) == -1) {
-            element.className += " " + arr2[i];
+    } else {
+        var selectedContainer = document.querySelector('.' + category);
+        if (selectedContainer) {
+            selectedContainer.style.display = 'block';
+            var heading = selectedContainer.querySelector(".section-heading");
+            if (heading) {
+                heading.innerHTML = category;
+            }
         }
     }
 }
 
-function w3RemoveClass(element, name) {
-    var i, arr1, arr2;
-    arr1 = element.className.split(" ");
-    arr2 = name.split(" ");
-    for (i = 0; i < arr2.length; i++) {
-        while (arr1.indexOf(arr2[i]) > -1) {
-            arr1.splice(arr1.indexOf(arr2[i]), 1);
-        }
-    }
-    element.className = arr1.join(" ");
-}
+// Activate 'All' button by default
+window.onload = function() {
+    filterSelection('all');
+};
