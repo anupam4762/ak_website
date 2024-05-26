@@ -53,7 +53,7 @@
     margin-right: 10px;
     color: #007bff;
 }
-.home-body {
+body {
     background-image: url('https://images.unsplash.com/photo-1470790376778-a9fbc86d70e2?q=80&w=2608&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
     background-attachment: fixed;
     background-size: cover;
@@ -405,6 +405,9 @@ li {
 .table-container {
     width: 100%; /* Adjust the width as needed */
     margin: 0 auto; /* Center horizontally on all screen sizes */
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
 }
 
 .table-container hr{
@@ -416,7 +419,7 @@ li {
     .table-container {
         display: flex;
         flex-direction: column;
-        align-items: center; /* Center horizontally */
+        align-items:; /* Center horizontally */
     }
 
     /* Adjust table width to remain unchanged on large screens */
@@ -429,6 +432,7 @@ li {
 .custom-table td{
     text-align: center;
     vertical-align: middle;
+    padding: 5px;
 }
 
 .custom-table a{
@@ -758,9 +762,9 @@ div.scroll-container img {
 
 /* Custom styles for facilities card logo images */
 .logo-img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    /* border-radius: 50%; */
     overflow: hidden;
     object-fit: cover;
     margin: 0 auto 20px;
@@ -1203,6 +1207,32 @@ img {
     padding-left: 10px;
 }
 
+.page-title {
+    margin-top: 20px;
+    text-align: center;
+    color: #343a40;
+}
+.team-member {
+    text-align: center;
+}
+.team-member img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.social-icons a {
+    color: #343a40;
+    margin: 0 5px;
+    transition: color 0.3s;
+}
+.social-icons a:hover {
+    color: #007bff;
+}
+.hidden {
+    display: none;
+}
+
 
 
 
@@ -1550,25 +1580,32 @@ hr {
 
 /* Home page style */
 .jumbotron {
-    position: relative;
-    background-color: #333333;
+    background: linear-gradient(to right, #2e0000, #ff282865);
     color: white;
-    padding: 80px;
-    margin-bottom: 0;
+    text-align: center;
+    padding: 4rem 2rem;
 }
-
-.jumbotron::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url(/images/banner.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    filter: blur(5px);
+.jumbotron h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+.jumbotron p {
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+}
+.btn-enroll {
+    background-color: #25D366;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.25rem;
+    transition: background-color 0.3s ease;
+}
+.btn-enroll:hover {
+    background-color: #128C7E;
+}
+.btn-enroll i {
+    margin-right: 0.5rem;
 }
 
 .home-poster {
@@ -1654,24 +1691,3 @@ h2 {
     margin: 0 5px;
 }
 
-
-/* Custom styles for the carousel */
-/* .team-carousel {
-    margin-top: 20px;
-}
-
-.carousel-indicators {
-    margin-top: 20px;
-}
-
-.carousel-indicators li {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #ccc;
-    margin: 0 5px;
-}
-
-.carousel-indicators li.active {
-    background-color: #007bff;
-} */
