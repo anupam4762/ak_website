@@ -1,280 +1,802 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<!--css-->
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link href="styles.css" rel="stylesheet" type="text/css" media="all" />
-    <!--css-->
+  <!--css-->
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap CSS -->
+  <link href="css/bootsrap.min.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="styles.css" rel="stylesheet" type="text/css" media="all" />
+  
+  <!--css-->
 
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!--googlefonts-->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway" rel="stylesheet"/>
-    <!--googlefonts-->
+  <!--googlefonts-->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway" rel="stylesheet" />
+  <!--googlefonts-->
 
-    <!-- JS Files -->
-    <script src="scripts.js" crossorigin="anonymous"></script>
+  <!-- JS Files -->
 </head>
 <body>
 
-<!--Navbar-->
+  <!--Navbar-->
+  <nav class="navbar navbar-expand-xl navbar-dark bg-custom">
+    <div class="container">
+      <a class="navbar-brand fs-2 fw-bold" href="#"><span><img src="ak-logo.png" width="35"
+            height="35" />&nbsp;</span>A.K. Science Tutorial</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDark"
+        aria-controls="navbarDark" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse show" id="navbarDark">
+        <ul class="navbar-nav me-auto mb-2 mb-xl-0 fs-5 ms-auto p-2 text-center">
+          <li class="nav-item me-3">
+            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item me-3">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item me-3">
+            <a class="nav-link" href="facilities.html">Facilities</a>
+          </li>
+          <li class="nav-item me-3">
+            <a class="nav-link" href="achievements.html">Achievements</a>
+          </li>
+          <li class="nav-item me-3">
+            <a class="nav-link" href="courses.html">Courses</a>
+          </li>
+          <li class="nav-item me-3">
+            <a class="nav-link active" href="resources.html">Resources</a>
+          </li>
+          <li class="nav-item me-3">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
 
-	<nav class="navbar navbar-expand-xl navbar-dark bg-custom">
-        <div class="container">
-            <a class="navbar-brand fs-2 fw-bold" href="#"><span><img src="ak-logo.png" width="35" height="35"/>&nbsp;</span>A.K. Science Tutorial</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDark" aria-controls="navbarDark" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse show" id="navbarDark">
-            <ul class="navbar-nav me-auto mb-2 mb-xl-0 fs-5 ms-auto p-2 text-center">
-                <li class="nav-item me-3">
-                <a class="nav-link" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item me-3">
-                <a class="nav-link" href="about.html">About</a>
-                </li>
-                <li class="nav-item me-3">
-                <a class="nav-link" href="facilities.html">Facilities</a>
-                </li>
-                <li class="nav-item me-3">
-                <a class="nav-link" href="achievements.html">Achievements</a>
-                </li>
-                <li class="nav-item me-3">
-                <a class="nav-link" href="courses.html">Courses</a>
-                </li>
-                <li class="nav-item me-3">
-                <a class="nav-link active" href="resources.html">Resources</a>
-                </li>
-                <li class="nav-item me-3">
-                <a class="nav-link" href="contact.html">Contact</a>
-                </li>
-            </ul>
-            
-            </div>
-        </div>
-    </nav>
+      </div>
+    </div>
+  </nav>
+  <!--Navbar-->
 
-<!--Navbar-->
+  <!-- Resources Content -->
 
-<!-- Resources Content -->
-
-<!-- Notes, Assignment and QB section -->
-<div class="container">
+  <!-- Notes, Assignment and QB section -->
+  <div class="container">
     <h1 class="page-title">Resources</h1>
-    <hr>
-    <h2 class="section-heading">Notes/Assignments/Question Paper</h2>
-    <div id="myResNotesBtnContainer">
-        <button class="resbtn resbtnactive" onclick="filterSelection('all')" id="default"> Show all</button>
-        <button class="resbtn" onclick="filterSelection('Notes')"> Notes</button>
-        <button class="resbtn" onclick="filterSelection('Assignments')"> Assignments</button>
-        <button class="resbtn" onclick="filterSelection('question-paper')"> Question Paper</button>
-    </div>
-
-    <!-- Notes Grid -->
-    <div class="row">
-  <div class="notes-column Notes">
-    <div class="notes-content">
-        <h4>Class X Mathematics</h4>
-	    <p>Click to view 2023 Notes boards Paper for Mathematics</p>
-		<center><a href="./pdfs/math-2023.pdf"  target="_blank"><button type="button" class="res-btn">Download</button></a></center>
-    </div>
-  </div>
-  <div class="notes-column Notes">
-    <div class="notes-content">
-        <h4>Class X Physics</h4>
-	    <p>Click to view 2023 Notes boards Paper for Mathematics</p>
-		<center><a href="./pdfs/math-2023.pdf" target="_blank"><button type="button" class="res-btn">Download</button></a></center>
-    </div>
-  </div>
-  <div class="notes-column Notes">
-    <div class="notes-content">
-        <h4>Class X Chemistry</h4>
-	    <p>Click to view 2023 Notes boards Paper for Mathematics</p>
-		<center><a href="./pdfs/math-2023.pdf" target="_blank"><button type="button" class="res-btn">Download</button></a></center>
-    </div>
-  </div>
-
-  <div class="notes-column Notes">
-    <div class="notes-content">
-        <h4>Class X Biology</h4>
-	    <p>Click to view 2023 Notes boards Paper for Mathematics</p>
-		<center><a href="./pdfs/math-2023.pdf" target="_blank"><button type="button" class="res-btn">Download</button></a></center>
-    </div>
-  </div>
-  <div class="notes-column Notes">
-    <div class="notes-content">
-        <h4>Class IX Maths</h4>
-	    <p>Click to view 2023 Notes boards Paper for Mathematics</p>
-		<center><a href="./pdfs/math-2023.pdf" target="_blank"><button type="button" class="res-btn">Download</button></a></center>
-    </div>
-  </div>
-  <div class="notes-column Notes">
-    <div class="notes-content">
-        <h4>Class IX Physics</h4>
-	    <p>Click to view 2023 Notes boards Paper for Mathematics</p>
-		<center><a href="./pdfs/math-2023.pdf" target="_blank"><button type="button" class="res-btn">Download</button></a></center>
-    </div>
-  </div>
-  <div class="notes-column Assignments">
-    <div class="notes-content">
-        <h4>Class IX Chemistry</h4>
-	    <p>Click to view 2023 ICSE boards Paper for Mathematics</p>
-		<center><a href="./pdfs/math-2023.pdf" target="_blank"><button type="button" class="res-btn">Download</button></a></center>
-    </div>
-  </div>
-  <div class="notes-column Assignments">
-    <div class="notes-content">
-        <h4>Class IX Biology</h4>
-	    <p>Click to view 2023 ICSE boards Paper for Mathematics</p>
-		<center><a href="./pdfs/math-2023.pdf" target="_blank"><button type="button" class="res-btn">Download</button></a></center>
-    </div>
-  </div>
-  <div class="notes-column Assignments">
-    <div class="notes-content">
-        <h4>Class VIII Maths</h4>
-	    <p>Click to view 2023 ICSE boards Paper for Mathematics</p>
-		<center><a href="./pdfs/math-2023.pdf" target="_blank"><button type="button" class="res-btn">Download</button></a></center>
-    </div>
-  </div>
-    <div class="notes-column question-paper">
-    <div class="notes-content">
-        <h4>Class VIII Physics</h4>
-	    <p>Click to view 2023 ICSE boards Paper for Mathematics</p>
-		<center><a href="./pdfs/math-2023.pdf" target="_blank"><button type="button" class="res-btn">Download</button></a></center>
-    </div>
-  </div>
-  <div class="notes-column question-paper">
-    <div class="notes-content">
-        <h4>Class VIII Chemistry</h4>
-	    <p>Click to view 2023 ICSE boards Paper for Mathematics</p>
-		<center><a href="./pdfs/math-2023.pdf" target="_blank"><button type="button" class="res-btn">Download</button></a></center>
-    </div>
-  </div>
-  <div class="notes-column question-paper">
-    <div class="notes-content">
-        <h4>Class VIII Biology</h4>
-	    <p>Click to view 2023 ICSE boards Paper for Mathematics</p>
-		<center><a href="./pdfs/math-2023.pdf"><button type="button" class="res-btn">Download</button></a></center>
-    </div>
-  </div> 
-    </div>
-    <hr>
-</div>
-<!-- Notes, Assignment and QB section -->
-
-<!-- AK Excel Video Section -->
-<div class="container">
-	<h3 class="tittle">AK Excel Youtube Videos</h3>
-	<h3 class="video-head">Class X</h3>
-	<div class="scroll-container">
-		<iframe class="yt-frame" width="300" height="250"
-			src="https://www.youtube.com/embed/watch?v=dLM4GXcYTR0&list=PLTQcUh7AdNs0Q5ZdxcT9gaFsUCJHPuEVG" allowfullscreen>
-		</iframe>
-		<iframe class="yt-frame" type="text/html" width="300" height="250"
-			src="https://www.youtube.com/embed/watch?v=Na2UAW6iMKg&list=PLTQcUh7AdNs0Q5ZdxcT9gaFsUCJHPuEVG&index=33" allowfullscreen>
-		</iframe>
-        <iframe class="yt-frame" width="300" height="250"
-            src="https://www.youtube.com/embed/watch?v=4WG1qgJLSbI&list=PLTQcUh7AdNs0Q5ZdxcT9gaFsUCJHPuEVG&index=15" allowfullscreen>
-        </iframe>
-        <iframe class="yt-frame" width="300" height="250"
-            src="https://www.youtube.com/embed/watch?v=WbttR64xmpk&list=PLTQcUh7AdNs0MpbBbGjipPlXlzgLREsFq" allowfullscreen>
-        </iframe>
-        <iframe class="yt-frame" width="300" height="250"
-            src="https://www.youtube.com/embed/watch?v=WbttR64xmpk&list=PLTQcUh7AdNs0MpbBbGjipPlXlzgLREsFq" allowfullscreen>
-        </iframe>
-        <iframe class="yt-frame" width="300" height="250"
-            src="https://www.youtube.com/embed/watch?v=WbttR64xmpk&list=PLTQcUh7AdNs0MpbBbGjipPlXlzgLREsFq" allowfullscreen>
-        </iframe>
-	</div>
-	<hr>
-	<h3 class="video-head">Class IX</h3>	
-	<div class="scroll-container">
-		<iframe class="yt-frame" width="300" height="250"
-			src="https://www.youtube.com/embed/watch?v=VeZSl9LjF-Q&list=PLTQcUh7AdNs3cEofrtEnu8Wz8Bd0zFm1Z" allowfullscreen>
-		</iframe>
-		<iframe class="yt-frame" width="300" height="250"
-			src="https://www.youtube.com/embed/watch?v=6lkGjC7lspw&list=PLTQcUh7AdNs2vViu5STpW-dQRd8Zm72bG" allowfullscreen>
-		</iframe>
-		<iframe class="yt-frame" width="300" height="250"
-			src="https://www.youtube.com/embed/watch?v=riYE7tMF0cw&list=PLTQcUh7AdNs0OeBbGgpyPxI96YhePns07" allowfullscreen>
-		</iframe>
-		<iframe class="yt-frame" width="300" height="250"
-			src="https://www.youtube.com/embed/watch?v=FRqJNsZ7fSo&list=PLTQcUh7AdNs0mdPtTHtxFd4qeVVWKHIwO&index=7" allowfullscreen>
-		</iframe>
-        <iframe class="yt-frame" width="300" height="250"
-			src="https://www.youtube.com/embed/watch?v=FRqJNsZ7fSo&list=PLTQcUh7AdNs0mdPtTHtxFd4qeVVWKHIwO&index=7" allowfullscreen>
-		</iframe>
-        <iframe class="yt-frame" width="300" height="250"
-			src="https://www.youtube.com/embed/watch?v=FRqJNsZ7fSo&list=PLTQcUh7AdNs0mdPtTHtxFd4qeVVWKHIwO&index=7" allowfullscreen>
-		</iframe>
-	</div>
-    <br>
-	<a href="https://www.youtube.com/@akexcel/featured" target="_blank"><button type="button" class="btn btn-primary">Click for more videos <span class="glyphicon glyphicon-new-window icon-links"></span></button></a>
-    <br>
-    <br>
-</div>
-<!-- AK Excel Video Section -->
-
-<!-- Resources Content -->
-
-
-<!-- Footer -->
-<footer class="bg-body-tertiary text-center text-lg-start text-white bg-custom">
-  <!-- Grid container -->
-  <div class="footer-section">
-	<div class="container p-4">
-    <!--Grid row-->
-    <div class="row">
-      <!--Grid column-->
-      <div class="col-lg-4 col-md-4 mb-4 mb-md-0">
-        <h5 class="text-uppercase">About Us</h5>
-        <p align="justify"><span>A.K. Science Tutorial stands as a distinguished coaching center catering to the ICSE and CBSE Boards, proudly rooted in Patna, Bihar since its inception in 2001. Specializing in classes for students from VIII to X, we provide comprehensive courses encompassing Physics, Chemistry, Biology, and Mathematics, augmented by intensive crash courses in Computer Science (Core Java) and Topography. </span></p>
-      </div>
-      
-      <div class="col-lg-4 col-md-4 mb-4 mb-md-0">
-        <h5 class="text-uppercase">Upcoming Batches</h5>
-        <p align="justify">New batches will be announced soon via webiste and other media. Kindly download our brochure and keep visiting our website for further details. </p>
-		<a href="#" >Download Brochure</a>		
+    <!-- <hr> -->
+    <div class="table-container">
+      <div id="myResNotesBtnContainer" class="resBtnContainer">
+        <button id="all" class="notes-btn notes-btn-active" onclick="filterSelection('all')" > Show all</button>
+        <button id="Notes" class="notes-btn" onclick="filterSelection('Notes')"> Notes</button>
+        <button id="Assignments" class="notes-btn" onclick="filterSelection('Assignments')"> Assignments</button>
+        <button id="Papers" class="notes-btn" onclick="filterSelection('Papers')"> Question Paper</button>
       </div>
 
-	  <div class="col-lg-4 col-md-4 mb-4 mb-md-0">
-        <h5 class="text-uppercase">Contact Us</h5>
-		<ul align="left">
-			<li align="left"><i class="fa-solid fa-address-book"></i> &nbsp; 107, Sukriti Apartment, South P, SP Verma Rd, Old Jakkanpur, Lodipur, Patna, Bihar 800001</li>
-			<li align="left"><i class="fa-solid fa-phone"></i> &nbsp; +91-9431045413</li>
-			<li align="left"><i class="fa-solid fa-envelope"></i> &nbsp; <a href="#"> aksciencetutorial@gmail.com</a></li>
-		</ul>
+      <hr>
+      <!-- Notes table -->
+      <div class="notes-container Notes all">
+            <h2 class="section-heading">Notes</h2>
+            <table class="table table-bordered custom-table">
+              <thead>
+                <tr>
+                  <th>Board Notes </th>
+                  <th>Class</th>
+                  <th>Subject</th>
+                  <th>Material</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td rowspan="4">ICSE</td>
+                  <td rowspan="4">Class X</td>
+                  <td>Physics</td>
+                  <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+                </tr>
+                <tr>
+                  <td>Chemistry</td>
+                  <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+                </tr>
+                <tr>
+                  <td>Biology</td>
+                  <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+                </tr>
+                <tr>
+                  <td>Mathematics</td>
+                  <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+                </tr>
+                <tr>
+                  <td rowspan="4">ICSE</td>
+                  <td rowspan="4">Class IX</td>
+                  <td>Physics</td>
+                  <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+                </tr>
+                <tr>
+                  <td>Chemistry</td>
+                  <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+                </tr>
+                <tr>
+                  <td>Biology</td>
+                  <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+                </tr>
+                <tr>
+                  <td>Mathematics</td>
+                  <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+                </tr>
+                <tr>
+                  <td rowspan="4">ICSE</td>
+                  <td rowspan="4">Class VIII</td>
+                  <td>Physics</td>
+                  <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+                </tr>
+                <tr>
+                  <td>Chemistry</td>
+                  <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+                </tr>
+                <tr>
+                  <td>Biology</td>
+                  <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+                </tr>
+                <tr>
+                  <td>Mathematics</td>
+                  <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+                </tr>
+                <tr>
+                  <td rowspan="4">CBSE</td>
+                  <td rowspan="4">Class X</td>
+                  <td>Physics</td>
+                  <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+                </tr>
+                <tr>
+                  <td>Chemistry</td>
+                  <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+                </tr>
+                <tr>
+                  <td>Biology</td>
+                  <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+                </tr>
+                <tr>
+                  <td>Mathematics</td>
+                  <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+                </tr>
+                <tr>
+                  <td rowspan="4">CBSE</td>
+                  <td rowspan="4">Class IX</td>
+                  <td>Physics</td>
+                  <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+                </tr>
+                <tr>
+                  <td>Chemistry</td>
+                  <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+                </tr>
+                <tr>
+                  <td>Biology</td>
+                  <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+                </tr>
+                <tr>
+                  <td>Mathematics</td>
+                  <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+                </tr>
+                <tr>
+                  <td rowspan="4">CBSE</td>
+                  <td rowspan="4">Class VIII</td>
+                  <td>Physics</td>
+                  <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+                </tr>
+                <tr>
+                  <td>Chemistry</td>
+                  <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+                </tr>
+                <tr>
+                  <td>Biology</td>
+                  <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+                </tr>
+                <tr>
+                  <td>Mathematics</td>
+                  <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+                </tr>
+              </tbody>
+            </table>
       </div>
-      <!--Grid column-->
+
+      <!-- Assignments table -->
+
+      <div class="notes-container Assignments all">
+        <h2 class="section-heading">Assignments</h2>
+        <table class="table table-bordered custom-table">
+          <thead>
+            <tr>
+              <th>Board Notes </th>
+              <th>Class</th>
+              <th>Subject</th>
+              <th>Material</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td rowspan="2">ICSE</td>
+              <td rowspan="2">Class X</td>
+              <td>Physics</td>
+              <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+            </tr>
+            <tr>
+              <td>Mathematics</td>
+              <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+            </tr>
+            <tr>
+              <td rowspan="">ICSE</td>
+              <td rowspan="">Class IX</td>
+              <td>Physics</td>
+              <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+            </tr>
+            <tr>
+              <td rowspan="2">ICSE</td>
+              <td rowspan="2">Class VIII</td>
+              <td>Physics</td>
+              <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+            </tr>
+            <tr>
+              <td>Chemistry</td>
+              <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+            </tr>
+            <tr>
+              <td rowspan="">CBSE</td>
+              <td rowspan="">Class X</td>
+              <td>Physics</td>
+              <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+            </tr>
+            <tr>
+              <td rowspan="">CBSE</td>
+              <td rowspan="">Class IX</td>
+              <td>Physics</td>
+              <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+            </tr>
+            <tr>
+              <td rowspan="">CBSE</td>
+              <td rowspan="">Class VIII</td>
+              <td>Physics</td>
+              <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Question Paper -->
+    
+      <div class="notes-container Papers all">
+        <h2 class="section-heading">Question Papers</h2>
+        <table class="table table-bordered custom-table">
+          <thead>
+            <tr>
+              <th>Board Notes </th>
+              <th>Class</th>
+              <th>Subject</th>
+              <th>Material</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td rowspan="2">ICSE</td>
+              <td rowspan="2">Class X</td>
+              <td>Physics</td>
+              <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+            </tr>
+            <tr>
+              <td>Mathematics</td>
+              <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+            </tr>
+            <tr>
+              <td rowspan="">ICSE</td>
+              <td rowspan="">Class IX</td>
+              <td>Physics</td>
+              <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+            </tr>
+            <tr>
+              <td rowspan="2">ICSE</td>
+              <td rowspan="2">Class VIII</td>
+              <td>Physics</td>
+              <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+            </tr>
+            <tr>
+              <td>Chemistry</td>
+              <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+            </tr>
+            <tr>
+              <td rowspan="">CBSE</td>
+              <td rowspan="">Class X</td>
+              <td>Physics</td>
+              <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+            </tr>
+            <tr>
+              <td rowspan="">CBSE</td>
+              <td rowspan="">Class IX</td>
+              <td>Physics</td>
+              <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+            </tr>
+            <tr>
+              <td rowspan="">CBSE</td>
+              <td rowspan="">Class VIII</td>
+              <td>Physics</td>
+              <td><center><a href="./pdfs/math-2023.pdf" target="_blank">Download</a></center></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
-    <!--Grid row-->
   </div>
+
+
+  
+  <!-- Notes, Assignment and QB section -->
+
+  <!-- AK Excel Video Section -->
+  <div class="video-container-10">
+    <center><div class="video-section-head">
+        <h3 class="">AK Excel Youtube Videos</h3>
+        <h3 class="">ICSE - Class X</h3>
+    </div></center>
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active yt-video">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-4 col-md-12">
+                <div class="card yt-card">
+                  <iframe class="yt-frame" src="https://www.youtube.com/embed/dLM4GXcYTR0?si=HsaNxnac43XMuMdG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  <div class="card-body">
+                    <h5 class="card-title">ICSE X - ACID</h5>
+                    <p class="card-text">
+                      Learn ACID, BASES, and SALTS chapter of ICSE Chemistry syllabus from Ajay Kumar Singh, Science Faculty @ A.K. Science Tutorial
+                    </p>
+                    <a href="https://www.youtube.com/@akexcel" target="_blank" data-mdb-ripple-init class="btn btn-primary btn-more-videos"><i class="fa-brands fa-youtube"></i> &nbsp;More Videos</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 d-none d-lg-block">
+                <div class="card yt-card">
+                  <iframe class="yt-frame" src="https://www.youtube.com/embed/xS-wcTdevps?si=0XZn6X9W82dZdYRc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  <div class="card-body">
+                    <h5 class="card-title">ICSE X - BASES</h5>
+                    <p class="card-text">
+                      Learn ACID, BASES, and SALTS chapter of ICSE Chemistry syllabus from Ajay Kumar Singh, Science Faculty @ A.K. Science Tutorial
+                    </p>
+                    <a href="https://www.youtube.com/@akexcel" target="_blank" data-mdb-ripple-init class="btn btn-primary btn-more-videos"><i class="fa-brands fa-youtube"></i> &nbsp;More Videos</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 d-none d-lg-block">
+                <div class="card yt-card">
+                  <iframe class="yt-frame" src="https://www.youtube.com/embed/1hatsC70pt4?si=O2zcO__1nZcy3PiV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  <div class="card-body">
+                    <h5 class="card-title">ICSE X - SALTS</h5>
+                    <p class="card-text">
+                      Learn ACID, BASES, and SALTS chapter of ICSE Chemistry syllabus from Ajay Kumar Singh, Science Faculty @ A.K. Science Tutorial
+                    </p>
+                    <a href="https://www.youtube.com/@akexcel" target="_blank" data-mdb-ripple-init class="btn btn-primary btn-more-videos"><i class="fa-brands fa-youtube"></i> &nbsp;More Videos</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-4 col-md-12">
+                <div class="card yt-card">
+                  <iframe class="yt-frame" src="https://www.youtube.com/embed/GOX61iFbjMw?si=jTvfFRWyhQNVO84T" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  <div class="card-body">
+                    <h5 class="card-title">ICSE X - FORCES</h5>
+                    <p class="card-text">
+                      Learn FORCES chapter of ICSE Physics syllabus from Abhijeet Singh, Physics Faculty @ A.K. Science Tutorial
+                    </p>
+                    <a href="https://www.youtube.com/@akexcel" target="_blank" data-mdb-ripple-init class="btn btn-primary btn-more-videos"><i class="fa-brands fa-youtube"></i> &nbsp;More Videos</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 d-none d-lg-block">
+                <div class="card yt-card">
+                  <iframe class="yt-frame" src="https://www.youtube.com/embed/X2-fZaaIQwg?si=wKNMo4KZMDK2Gi4s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  <div class="card-body">
+                    <h5 class="card-title">ICSE X - WORK, POWER & ENERGY</h5>
+                    <p class="card-text">
+                      Learn WORK, POWER & ENERGY chapter of ICSE Physics syllabus from Abhijeet Singh, Physics Faculty @ A.K. Science Tutorial
+                    </p>
+                    <a href="https://www.youtube.com/@akexcel" target="_blank" data-mdb-ripple-init class="btn btn-primary btn-more-videos"><i class="fa-brands fa-youtube"></i> &nbsp;More Videos</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 d-none d-lg-block">
+                <div class="card yt-card">
+                  <iframe class="yt-frame" src="https://www.youtube.com/embed/xBm3leIGo-s?si=HZQgsLJt8Ppcoznu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  <div class="card-body">
+                    <h5 class="card-title">ICSE X - MACHINES</h5>
+                    <p class="card-text">
+                      Learn MACHINES chapter of ICSE Physics syllabus from Abhijeet Singh, Physics Faculty @ A.K. Science Tutorial
+                    </p>
+                    <a href="https://www.youtube.com/@akexcel" target="_blank" data-mdb-ripple-init class="btn btn-primary btn-more-videos"><i class="fa-brands fa-youtube"></i> &nbsp;More Videos</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-4 col-md-12">
+                <div class="card yt-card">
+                  <iframe class="yt-frame" src="https://www.youtube.com/embed/JYRF_cMMuu4?si=fvbULCcOOtdGlPPb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  <div class="card-body">
+                    <h5 class="card-title">ICSE X - GENETICS</h5>
+                    <p class="card-text">
+                      Learn GENETICS chapter of ICSE Biology syllabus from Ajay Kumar Singh, Science Faculty @ A.K. Science Tutorial
+                    </p>
+                    <a href="https://www.youtube.com/@akexcel" target="_blank" data-mdb-ripple-init class="btn btn-primary btn-more-videos"><i class="fa-brands fa-youtube"></i> &nbsp;More Videos</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 d-none d-lg-block">
+                <div class="card yt-card">
+                  <iframe class="yt-frame" src="https://www.youtube.com/embed/rg_Yie5fcvU?si=SuFPwNOEUsQTSnoY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  <div class="card-body">
+                    <h5 class="card-title">ICSE X - CELL DIVISION</h5>
+                    <p class="card-text">
+                      Learn CELL DIVISION chapter of ICSE Biology syllabus from Ajay Kumar Singh, Science Faculty @ A.K. Science Tutorial
+                    </p>
+                    <a href="https://www.youtube.com/@akexcel" target="_blank" data-mdb-ripple-init class="btn btn-primary btn-more-videos"><i class="fa-brands fa-youtube"></i> &nbsp;More Videos</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 d-none d-lg-block">
+                <div class="card yt-card">
+                  <iframe class="yt-frame" src="https://www.youtube.com/embed/C7Tu8K1_6Go?si=BYUh9pIS125UOiCT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  <div class="card-body">
+                    <h5 class="card-title">ICSE X - ABSORPTION BY ROOTS</h5>
+                    <p class="card-text">
+                      Learn ABSORPTION BY ROOTS chapter of ICSE Biology syllabus from Ajay Kumar Singh, Science Faculty @ A.K. Science Tutorial
+                    </p>
+                    <a href="https://www.youtube.com/@akexcel" target="_blank" data-mdb-ripple-init class="btn btn-primary btn-more-videos"><i class="fa-brands fa-youtube"></i> &nbsp;More Videos</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-4 col-md-12">
+                <div class="card yt-card">
+                  <iframe class="yt-frame" src="https://www.youtube.com/embed/JU5J1Fb4hGw?si=qTGwW7nL92llK86t" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  <div class="card-body">
+                    <h5 class="card-title">ICSE X - QUADRATIC EQUATION</h5>
+                    <p class="card-text">
+                      Learn QUADRATIC EQUATION chapter of ICSE Mathematics syllabus from Mrs. Kranti Singh, Maths Faculty @ A.K. Science Tutorial
+                    </p>
+                    <a href="https://www.youtube.com/@akexcel" target="_blank" data-mdb-ripple-init class="btn btn-primary btn-more-videos"><i class="fa-brands fa-youtube"></i> &nbsp;More Videos</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 d-none d-lg-block">
+                <div class="card yt-card">
+                  <iframe class="yt-frame" src="https://www.youtube.com/embed/WbttR64xmpk?si=kqABWtA_iezCW2KU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  <div class="card-body">
+                    <h5 class="card-title">ICSE X - SIMILARITY</h5>
+                    <p class="card-text">
+                      Learn SIMILARITY chapter of ICSE Mathematics syllabus from Mrs. Kranti Singh, Maths Faculty @ A.K. Science Tutorial
+                    </p>
+                    <a href="https://www.youtube.com/@akexcel" target="_blank" data-mdb-ripple-init class="btn btn-primary btn-more-videos"><i class="fa-brands fa-youtube"></i> &nbsp;More Videos</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 d-none d-lg-block">
+                <div class="card yt-card">
+                  <iframe class="yt-frame" src="https://www.youtube.com/embed/DdQqXCHCO5Q?si=YPlPMZ-RkJrrY6JC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  <div class="card-body">
+                    <h5 class="card-title">ICSE X - GEOMETRIC PROGRESSION</h5>
+                    <p class="card-text">
+                      Learn GEOMETRIC PROGRESSION chapter of ICSE Mathematics syllabus from Abhinav Singh, Maths Faculty @ A.K. Science Tutorial
+                    </p>
+                    <a href="https://www.youtube.com/@akexcel" target="_blank" data-mdb-ripple-init class="btn btn-primary btn-more-videos"><i class="fa-brands fa-youtube"></i> &nbsp;More Videos</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
   </div>
-  <!-- Grid container -->
 
-  <!-- Copyright -->
-  <div class="copy-section">
-		<div class="">
-			<div class="iconup"><a href="#top"><i class="fa-solid fa-chevron-up"></i> &nbsp;TOP</a></div>
-			<div class="social-icons">
-				<a href="https://www.facebook.com" target='_blank'><i class="icon1"></i></a>
-				<a href="https://twitter.com" target="_blank"><i class="icon2"></i></a>
-				<a href="https://plus.google.com" target="_blank"><i class="icon3"></i></a>
-				<a href="https://www.linkedin.com" target="_blank"><i class="icon4"></i></a>
-			</div>
-			<div class="copy">
-				<p>&copy; A.K. Science Tutorial 2024 | Designed & Maintained by Anupam Anand</a></p>
-			</div>
-		</div>
-	</div>
-  <!-- Copyright -->
-</footer>
-<!-- Footer -->
+  <div class="video-container-9">
+    <center><div class="video-section-head">
+        <h3 class="tittle">AK Excel Youtube Videos</h3>
+        <h3 class="video-head">ICSE - Class IX</h3>
+    </div></center>
+    <div id="cbse-carousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#cbse-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#cbse-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#cbse-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#cbse-carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active yt-video">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-4 col-md-12">
+                <div class="card yt-card">
+                  <iframe class="yt-frame" src="https://www.youtube.com/embed/6lkGjC7lspw?si=k89g1EMMbDsxAzvC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  <div class="card-body">
+                    <h5 class="card-title">ICSE IX - ATOMIC STRUCTURE</h5>
+                    <p class="card-text">
+                      Learn ATOMIC STRUCTURE chapter of ICSE Chemistry syllabus from Ajay Kumar Singh, Science Faculty @ A.K. Science Tutorial
+                    </p>
+                    <a href="https://www.youtube.com/@akexcel" target="_blank" data-mdb-ripple-init class="btn btn-primary btn-more-videos"><i class="fa-brands fa-youtube"></i> &nbsp;More Videos</a>
+                  </div>
+                </div>
+              </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+              <div class="col-lg-4 d-none d-lg-block">
+                <div class="card yt-card">
+                  <iframe class="yt-frame" src="https://www.youtube.com/embed/fKy--J4CrG8?si=b5DtdjPPxIniVJVX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  <div class="card-body">
+                    <h5 class="card-title">ICSE IX - CHEMICAL BONDING</h5>
+                    <p class="card-text">
+                      Learn CHEMICAL BONDING chapter of ICSE Chemistry syllabus from Ajay Kumar Singh, Science Faculty @ A.K. Science Tutorial
+                    </p>
+                    <a href="https://www.youtube.com/@akexcel" target="_blank" data-mdb-ripple-init class="btn btn-primary btn-more-videos"><i class="fa-brands fa-youtube"></i> &nbsp;More Videos</a>
+                  </div>
+                </div>
+              </div>
 
+              <div class="col-lg-4 d-none d-lg-block">
+                <div class="card yt-card">
+                  <iframe class="yt-frame" src="https://www.youtube.com/embed/WDs_rufsiSY?si=uzXDQnqYNyZgBOZX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  <div class="card-body">
+                    <h5 class="card-title">ICSE IX - OXIDATION & REDUCTION</h5>
+                    <p class="card-text">
+                      Learn OXIDATION & REDUCTION chapter of ICSE Chemistry syllabus from Ajay Kumar Singh, Science Faculty @ A.K. Science Tutorial
+                    </p>
+                    <a href="https://www.youtube.com/@akexcel" target="_blank" data-mdb-ripple-init class="btn btn-primary btn-more-videos"><i class="fa-brands fa-youtube"></i> &nbsp;More Videos</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-4 col-md-12">
+                <div class="card yt-card">
+                  <iframe class="yt-frame" src="https://www.youtube.com/embed/riYE7tMF0cw?si=rCWNvOwXXgV5CX9E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  <div class="card-body">
+                    <h5 class="card-title">ICSE IX - MOTION IN ONE DIMENTION</h5>
+                    <p class="card-text">
+                      Learn MOTION IN ONE DIMENTION chapter of ICSE Physics syllabus from Abhijeet Singh, Physics Faculty @ A.K. Science Tutorial
+                    </p>
+                    <a href="https://www.youtube.com/@akexcel" target="_blank" data-mdb-ripple-init class="btn btn-primary btn-more-videos"><i class="fa-brands fa-youtube"></i> &nbsp;More Videos</a>
+                  </div>
+                </div>
+              </div>
 
+              <div class="col-lg-4 d-none d-lg-block">
+                <div class="card yt-card">
+                  <iframe class="yt-frame" src="https://www.youtube.com/embed/GdxQLVIZDh4?si=Thrio7A1tkl9r6Hx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  <div class="card-body">
+                    <h5 class="card-title">ICSE IX - LAWS OF MOTION</h5>
+                    <p class="card-text">
+                      Learn LAWS OF MOTION chapter of ICSE Physics syllabus from Abhijeet Singh, Physics Faculty @ A.K. Science Tutorial
+                    </p>
+                    <a href="https://www.youtube.com/@akexcel" target="_blank" data-mdb-ripple-init class="btn btn-primary btn-more-videos"><i class="fa-brands fa-youtube"></i> &nbsp;More Videos</a>
+                  </div>
+                </div>
+              </div>
 
+              <div class="col-lg-4 d-none d-lg-block">
+                <div class="card yt-card">
+                  <iframe class="yt-frame" src="https://www.youtube.com/embed/cDRzpDOpvFU?si=jimLuXignF4AZ5HE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  <div class="card-body">
+                    <h5 class="card-title">ICSE IX - HEAT</h5>
+                    <p class="card-text">
+                      Learn HEAT chapter of ICSE Physics syllabus from Abhijeet Singh, Physics Faculty @ A.K. Science Tutorial
+                    </p>
+                    <a href="https://www.youtube.com/@akexcel" target="_blank" data-mdb-ripple-init class="btn btn-primary btn-more-videos"><i class="fa-brands fa-youtube"></i> &nbsp;More Videos</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-4 col-md-12">
+                <div class="card yt-card">
+                  <iframe class="yt-frame" src="https://www.youtube.com/embed/yRv2n7T0SkU?si=rr5nlbXjouhEI9OT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  <div class="card-body">
+                    <h5 class="card-title">ICSE IX - TISSUES</h5>
+                    <p class="card-text">
+                      Learn TISSUES chapter of ICSE Biology syllabus from Ajay Kumar Singh, Science Faculty @ A.K. Science Tutorial
+                    </p>
+                    <a href="https://www.youtube.com/@akexcel" target="_blank" data-mdb-ripple-init class="btn btn-primary btn-more-videos"><i class="fa-brands fa-youtube"></i> &nbsp;More Videos</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 d-none d-lg-block">
+                <div class="card yt-card">
+                  <iframe class="yt-frame" src="https://www.youtube.com/embed/q1IMJNO6MhM?si=RcjuxDC_0hv7gUNp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  <div class="card-body">
+                    <h5 class="card-title">ICSE IX - TISSUES</h5>
+                    <p class="card-text">
+                      Learn TISSUES chapter of ICSE Biology syllabus from Ajay Kumar Singh, Science Faculty @ A.K. Science Tutorial
+                    </p>
+                    <a href="https://www.youtube.com/@akexcel" target="_blank" data-mdb-ripple-init class="btn btn-primary btn-more-videos"><i class="fa-brands fa-youtube"></i> &nbsp;More Videos</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 d-none d-lg-block">
+                <div class="card yt-card">
+                  <iframe class="yt-frame" src="https://www.youtube.com/embed/VeZSl9LjF-Q?si=u3YrNZoLrgFEFHsx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  <div class="card-body">
+                    <h5 class="card-title">ICSE IX - CELL</h5>
+                    <p class="card-text">
+                      Learn CELL chapter of ICSE Biology syllabus from Ajay Kumar Singh, Science Faculty @ A.K. Science Tutorial
+                    </p>
+                    <a href="https://www.youtube.com/@akexcel" target="_blank" data-mdb-ripple-init class="btn btn-primary btn-more-videos"><i class="fa-brands fa-youtube"></i> &nbsp;More Videos</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-4 col-md-12">
+                <div class="card yt-card">
+                  <iframe class="yt-frame" src="https://www.youtube.com/embed/LklUCuECfO4?si=XVOtHHPCZriszXqQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  <div class="card-body">
+                    <h5 class="card-title">ICSE IX - TRIANGLE</h5>
+                    <p class="card-text">
+                      Learn TRIANGLE chapter of ICSE Mathematics syllabus from Mrs. Kranti Singh, Maths Faculty @ A.K. Science Tutorial
+                    </p>
+                    <a href="https://www.youtube.com/@akexcel" target="_blank" data-mdb-ripple-init class="btn btn-primary btn-more-videos"><i class="fa-brands fa-youtube"></i> &nbsp;More Videos</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 d-none d-lg-block">
+                <div class="card yt-card">
+                  <iframe class="yt-frame" src="https://www.youtube.com/embed/oGE6nX9au6M?si=vDFhkT5Fu_gIRVwT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  <div class="card-body">
+                    <h5 class="card-title">ICSE IX - NUMBER SYSTEM</h5>
+                    <p class="card-text">
+                      Learn NUMBER SYSTEM chapter of ICSE Mathematics syllabus from Abhinav Singh, Maths Faculty @ A.K. Science Tutorial
+                    </p>
+                    <a href="https://www.youtube.com/@akexcel" target="_blank" data-mdb-ripple-init class="btn btn-primary btn-more-videos"><i class="fa-brands fa-youtube"></i> &nbsp;More Videos</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 d-none d-lg-block">
+                <div class="card yt-card">
+                  <iframe class="yt-frame" src="https://www.youtube.com/embed/vkMQe5SZZ5g?si=D_kENP4M-EgmguCd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  <div class="card-body">
+                    <h5 class="card-title">ICSE IX - TRIANGLE(SOLVED EXAMPLES)</h5>
+                    <p class="card-text">
+                      Learn TRIANGLE(SOLVED EXAMPLES) chapter of ICSE Mathematics syllabus from Abhinav Singh, Maths Faculty @ A.K. Science Tutorial
+                    </p>
+                    <a href="https://www.youtube.com/@akexcel" target="_blank" data-mdb-ripple-init class="btn btn-primary btn-more-videos"><i class="fa-brands fa-youtube"></i> &nbsp;More Videos</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#cbse-carousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#cbse-carousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+  
+  <!-- Resources Content -->
+
+  <!-- Footer -->
+  <footer class="bg-body-tertiary text-center text-lg-start text-white bg-footer-custom">
+    <!-- Grid container -->
+    <div class="footer-section">
+      <div class="container p-4">
+        <!--Grid row-->
+        <div class="row">
+          <!--Grid column-->
+          <div class="col-lg-4 col-md-4 mb-4 mb-md-0">
+            <h5 class="text-uppercase">About Us</h5>
+            <p align="justify"><span>A.K. Science Tutorial stands as a distinguished coaching center catering to the
+                ICSE and CBSE Boards, proudly rooted in Patna, Bihar since its inception in 2001. Specializing in
+                classes for students from VIII to X, we provide comprehensive courses encompassing Physics, Chemistry,
+                Biology, and Mathematics, augmented by intensive crash courses in Computer Science (Core Java) and
+                Topography. </span></p>
+          </div>
+
+          <div class="col-lg-4 col-md-4 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Upcoming Batches</h5>
+            <p align="justify">New batches will be announced soon via webiste and other media. Kindly download our
+              brochure and keep visiting our website for further details. </p>
+            <a href="#">Download Brochure</a>
+          </div>
+
+          <div class="col-lg-4 col-md-4 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Contact Us</h5>
+            <p><i class="fa-solid fa-address-book"></i> &nbsp; <a href="https://maps.app.goo.gl/sA1t2L9PSMyEhAYD7">107, Sukriti Apartment, South P, SP Verma Rd, Old Jakkanpur, Lodipur, Patna, Bihar 800001</a></p>
+            <p><i class="fa-solid fa-phone"></i> &nbsp; +91-9431045413</li></p>
+            <p><i class="fa-solid fa-envelope"></i> &nbsp; <a href="mailto:aksciencetutorial@gmail.com"> aksciencetutorial@gmail.com</a></p>
+        </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </div>
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="copy-section">
+      <div class="">
+          <div class="iconup"><a href="#top"><i class="fa-solid fa-chevron-up"></i> &nbsp;TOP</a></div>
+          <div class="social-icons">
+                  <a href="https://www.instagram.com/akscience_tutorial?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fab fa-facebook-f"></i></a>
+                  <a href="https://www.instagram.com/akscience_tutorial?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fab fa-instagram"></i></a>
+                  <a href="https://www.youtube.com/channel/UCXR_c_AK0EurUiGdb7Qh5ug"><i class="fab fa-youtube"></i></a>                    
+          </div>
+          <div class="copy">
+              <p>&copy; A.K. Science Tutorial 2024 | Designed & Maintained by Anupam Anand</a></p>
+          </div>
+      </div>
+  </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  
+  <script src="scripts.js" crossorigin="anonymous"></script>
 </body>
+
 </html>

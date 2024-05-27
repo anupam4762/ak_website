@@ -1,65 +1,58 @@
-
 // Smooth scrolling
 
 
 
-$('a[href*="#top"]:not([href="#"])').click(function() {
-  if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-    var target = $(this.hash);
-    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-    if (target.length) {
-      $('html, body').animate({
-        scrollTop: target.offset().top
-      }, 1000);
-      return false;
+$('a[href*="#top"]:not([href="#"])').click(function () {
+    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+        if (target.length) {
+            $('html, body').animate({
+                scrollTop: target.offset().top
+            }, 1000);
+            return false;
+        }
     }
-  }
 });
 
-filterSelection("all")
-function filterSelection(c) {
-  var x, i;
-  x = document.getElementsByClassName("notes-column");
-  if (c == "all") c = "";
-  for (i = 0; i < x.length; i++) {
-    w3RemoveClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-  }
-}
 
-function w3AddClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
-  }
-}
+function filterSelection(category) {
+    // Remove the 'notes-btn-active' class from all buttons
+    var buttons = document.querySelectorAll('.notes-btn');
+    buttons.forEach(function(button) {
+        button.classList.remove('notes-btn-active');
+    });
 
-function w3RemoveClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    // Add the 'notes-btn-active' class to the selected button
+    var selectedButton = document.getElementById(category);
+    if (selectedButton) {
+        selectedButton.classList.add('notes-btn-active');
     }
-  }
-  element.className = arr1.join(" ");
+
+    // Hide all containers initially
+    var containers = document.querySelectorAll('.notes-container');
+    containers.forEach(function(container) {
+        container.style.display = 'none';
+    });
+    
+    // Show the selected container and update the heading
+    if (category === 'all') {
+        containers.forEach(function(container) {
+            container.style.display = 'block';
+        });
+    } else {
+        var selectedContainer = document.querySelector('.' + category);
+        if (selectedContainer) {
+            selectedContainer.style.display = 'block';
+            var heading = selectedContainer.querySelector(".section-heading");
+            if (heading) {
+                heading.innerHTML = category;
+            }
+        }
+    }
 }
 
-
-// Add active class to the current button (highlight it)
-var btnContainer = document.getElementById("myResNotesBtnContainer");
-var btns = btnContainer.getElementsByClassName("resbtn");
-// console.log(btns.length);
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function(){
-    var current = document.getElementsByClassName("resbtnactive");
-    current[0].className = current[0].className.replace(" resbtnactive", "");
-    this.className += " resbtnactive";
-  });
-}
-
-
-
+// Activate 'All' button by default
+window.onload = function() {
+    filterSelection('all');
+};
